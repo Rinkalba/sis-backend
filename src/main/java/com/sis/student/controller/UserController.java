@@ -122,10 +122,10 @@ public class UserController {
 	public ResponseEntity<String> deleteUser(@PathVariable String id) {
 		boolean deleteUser = services.deleteUser(id);
 		if(deleteUser) {
-			return new ResponseEntity<String>("Deleted Successfully!",HttpStatus.OK);
+			return new ResponseEntity<String>("User Deleted Successfully!",HttpStatus.OK);
 			
 		}else {
-			return new ResponseEntity<String>("Something went wrong!",HttpStatus.BAD_REQUEST);
+			return new ResponseEntity<String>("Something went wrong!!",HttpStatus.BAD_REQUEST);
 		}
 	}
 	
